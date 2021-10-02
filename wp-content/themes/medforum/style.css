@@ -1,0 +1,3160 @@
+/* # MedForum Theme  
+Theme Name: MedForum Theme  
+Theme URI: http://transmitstudio.com/  
+Description: This is a custom child theme created for the Genesis Framework.   
+Author: Dave Kuhar, Transmit Studio
+Author URI: http://transmitstudio.com/  
+Template: genesis  
+Template Version: 2.1.2.20150420 
+License: GPL-2.0+  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+*/
+
+
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize9
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Column Classes
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+- Widgets
+	- Featured Content
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+- Site Header
+	- Title Area
+	- Widget Area
+- Site Navigation
+	- Header Navigation
+	- Primary Navigation
+	- Secondary Navigation
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+- Sidebars
+- Footer Widgets
+- Site Footer
+- Media Queries
+	- Retina Display
+	- Max-width: 1200px
+	- Max-width: 960px
+	- Max-width: 800px
+*/
+
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Baseline Normalize
+--------------------------------------------- */
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#333}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html { font-size: 62.5%; }
+
+/* ## Box Sizing
+--------------------------------------------- */
+
+*,
+input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+#menu-mobile {
+	display: none;
+	visibility: hidden;
+}
+
+
+/* ## Float Clearing
+--------------------------------------------- */
+
+.author-box:before,
+.clearfix:before,
+.entry:before,
+.entry-content:before,
+.footer-widgets:before,
+.nav-primary:before,
+.nav-secondary:before,
+.pagination:before,
+.site-container:before,
+.site-footer:before,
+.site-header:before,
+.site-inner:before,
+.wrap:before,
+.home-info:before,
+.home-date:before,
+.home-sponsors-carousel:before,
+#sponsorblock:before,
+.email-signup:before {
+	content: " ";
+	display: table;
+}
+
+.author-box:after,
+.clearfix:after,
+.entry:after,
+.entry-content:after,
+.footer-widgets:after,
+.nav-primary:after,
+.nav-secondary:after,
+.pagination:after,
+.site-container:after,
+.site-footer:after,
+.site-header:after,
+.site-inner:after,
+.wrap:after,
+.home-info:after,
+.home-date:after,
+.home-sponsors-carousel:after,
+#sponsorblock:after,
+.email-signup:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Typographical Elements
+--------------------------------------------- */
+
+body {
+	background-color: #f5f5f5;
+	background: transparent url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/background-tile.svg) repeat fixed;
+	background-size: 85px 85px;
+	background: transparent url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/background-tile.gif) repeat fixed\9;
+	background-size: auto\9;
+	color: #333;
+	font-family: Arial, sans-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 1.625;
+	margin: 0;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+::-moz-selection {
+	background-color: #333;
+	color: #fff;
+}
+
+::selection {
+	background-color: #333;
+	color: #fff;
+}
+
+a {
+	color: #007398;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+}
+
+p {
+	margin: 0 0 28px;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 40px;
+}
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 30px;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+hr {
+	color: #99a4ae;
+}
+
+.allcaps {
+	text-transform: uppercase;
+}
+
+.print-header {
+	display: none !important;
+}
+
+
+/* ## Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+/* ## Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+.featured-content img,
+.gallery img {
+	width: auto;
+}
+
+/* ## Forms
+--------------------------------------------- */
+
+input,
+select,
+textarea {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 4px;
+	width: 100%;
+}
+
+input[type="search"] {
+	background: rgba(153,164,174,.35) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/mag-glass.png) right center no-repeat;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/search-bkgd.jpg) right center no-repeat\9;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+	border-radius: 8px;
+	color: #55697A;
+	border: none;
+	font-size: 12px;
+	padding: 8px;
+}
+
+input:focus,
+textarea:focus {
+	border: none;
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+::-moz-placeholder {
+	color: #333;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #333;
+	font-weight: 300;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.prev-page a,
+.next-page a {
+	background-color: #333;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 300;
+	padding: 8px;
+	text-transform: uppercase;
+	width: auto;
+	border-radius: 8px;
+}
+
+.footer-widgets button,
+.footer-widgets input[type="button"],
+.footer-widgets input[type="reset"],
+.footer-widgets input[type="submit"],
+.footer-widgets .button {
+	background-color: #e5554e;
+	color: #fff;
+}
+
+button:hover,
+input:hover[type="button"],
+input:hover[type="reset"],
+input:hover[type="submit"],
+.button:hover {
+	background-color: #e5554e;
+	color: #fff;
+}
+
+.entry-content .button:hover {
+	color: #fff;
+}
+
+.footer-widgets button:hover,
+.footer-widgets input:hover[type="button"],
+.footer-widgets input:hover[type="reset"],
+.footer-widgets input:hover[type="submit"],
+.footer-widgets .button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+.button, .prev-page, .next-page {
+	display: inline-block;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}
+
+/* ## Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+tbody {
+	border-bottom: 1px solid #ddd;
+}
+
+td,
+th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid #ddd;
+	padding: 6px 0;
+}
+
+th {
+	font-weight: 400;
+}
+
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Containers
+--------------------------------------------- */
+
+.site-inner,
+.wrap {
+	margin: 0 auto;
+	max-width: 1100px;
+	background: white;
+}
+
+.site-inner {
+	clear: both;
+	background: rgb(255,255,255);
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	width: 980px;
+}
+
+.content-sidebar-sidebar .content-sidebar-wrap {
+	float: left;
+}
+
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	float: right;
+}
+
+/* ### Content */
+
+.content {
+	float: right;
+	width: 800px;
+}
+
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+	float: left;
+}
+
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+	width: 580px;
+}
+
+.full-width-content .content {
+	width: 100%;
+}
+
+/* ### Primary Sidebar */
+
+.sidebar-primary {
+	float: right;
+	width: 250px;
+}
+
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+	float: left;
+}
+
+/* ### Secondary Sidebar */
+
+.sidebar-secondary {
+	float: left;
+	width: 180px;
+}
+
+.content-sidebar-sidebar .sidebar-secondary {
+	float: right;
+}
+
+/* ## Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+/* # Site-specific
+---------------------------------------------------------------------------------------------------- */
+/* home page
+--------------------------------------------- */
+
+.home-hero.widget-area {
+	height: 480px;
+	background: transparent url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/home-top-image-2017.jpg) no-repeat center top fixed;
+	padding: 285px 60px 0;
+	text-align: center;
+	color: white;
+}
+
+.home-hero.widget-area h2, .entry-content .internal-register-button h2 {
+	font-weight: bold;
+	margin-top: 25px;
+	margin-top: 2.5rem;
+	color: white;
+}
+
+.home-hero.widget-area p, .entry-content .internal-register-button p {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 0 20px 5px;
+	margin: 0 2rem .5rem;
+	color: white;
+}
+
+.home-hero.widget-area i, .entry-content .internal-register-button i {
+	font-size: 38px;
+	font-size: 3.8rem;
+}
+
+.home-hero.widget-area a, .entry-content .internal-register-button a {
+	color: white;
+}
+
+.home-hero.widget-area a:hover, .entry-content .internal-register-button a:hover {
+	color: #007398;
+}
+
+.register-button, .fivews-button, .agenda-button {
+	/* width: 300px; */
+	width: 30%;
+	height: 175px;
+	float: left;
+	background-size: 200%;
+}
+
+.internal-register-button {
+	width: 100%;
+	height: 175px;
+	float: left;
+	margin: 54px 5% 0 0;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-register.png) center center no-repeat;
+	text-align: center;
+}
+
+.register-button {
+	/* margin-right: 40px; */
+	margin-right: 5%;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-register.png) center center no-repeat;
+	background: rgba(0,175,170,.9) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-register-large.svg) center center no-repeat;
+}
+
+.fivews-button {
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-fivews.png) center center no-repeat;
+	background: rgba(110,205,178,.9) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-fivews-large.svg) center center no-repeat;
+}
+
+.agenda-button {
+	float: right;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-agenda.png) center center no-repeat;
+	background: rgba(107,162,185,.95) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/button-agenda-large.svg) center center no-repeat;
+}
+
+.email-signup {
+	height: 104px;
+	float:left;
+	width:100%;
+	/* background: rgb(0,114,151); */
+	padding: 12px 60px;
+	color: white;
+	margin-top: 10px;
+	background: #007297 url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/entry-header-globe.svg) center 186px;
+	background: #007297 url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/entry-header-globe.gif) center top\9;
+	background-size: 1100px 360px;
+	background-size: auto\9;	
+}
+
+.email-signup .gform_wrapper h3.gform_title {
+	color: white;
+	margin: 0;
+	font-size: 28px;
+}
+
+.email-signup .gform_description {
+	font-size: 16px;
+}
+
+.email-signup .gform_wrapper .gform_heading {
+	width: 55%;
+	float: left;
+}
+
+.email-signup .gform_body {
+	float: left;
+	width: 40%;
+	margin-top: 14px;
+}
+
+.email-signup .gform_wrapper .gform_footer {
+	float: right;
+	margin-top: 0;
+	clear: none !important;
+}
+
+.email-signup  label.gfield_label {
+	display: none !important;
+}
+
+.email-signup input {
+	padding: 10px !important;
+	font-style: italic;
+	font-size: 14px !important;
+	color: dimgrey;
+}
+
+.innovation-brief {
+	background-color: rgb(0,0,0);
+	color: white;
+	width: 42%;
+	float: left;
+	padding: 40px 60px 31px;
+	margin-top: 10px;
+}
+
+.innovation-brief h4 {
+	color: white;
+	font-size: 34px;
+	font-size: 3.4rem;
+	font-weight: normal;
+}
+
+.innovation-brief p {
+	font-size: 13px;
+	font-size: 1.3rem;
+	margin-bottom: 6px;
+}
+
+.innovation-brief a {
+	color: #fff;
+}
+
+.innovation-brief a:hover {
+	text-decoration: underline;	
+} 
+
+.home-slides {
+	background: rgb(153,164,174);
+	width: 57%;
+	height: 424px;
+	float: right;
+	/* padding: 44px 46px; */
+	margin-top: 10px;
+}
+
+.home-slides h4.widgettitle {
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 4px;
+	font-size: 15px;
+}
+
+.home-date {
+	height: 372px;
+	background: transparent url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/home-bottom-image-2017.jpg) center center no-repeat;
+}
+
+.home-date .textwidget {
+	position: relative;
+}
+
+.attendee-image {
+	margin-top: 10px;
+}
+
+.forumdate {
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	text-align: center;
+	background: transparent url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/forumdate-bkgd.png) repeat;
+	background: rgba(51,62,72,.8);
+	position: absolute;
+	padding: 26px 0 14px;
+	top: 282px;
+}
+
+.forumdate h2, .forumdate h4 {
+	color: white !important;
+}
+
+.forumdate h2 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	letter-spacing: 4px;
+}
+
+.forumdate h4 {
+	font-size: 12px;
+	font-size: 1.2rem;
+	letter-spacing: 4px;
+}
+
+.entry-content ul.wpb_thumbnails {
+	margin-left: 0;
+}
+
+body ul.wpb_thumbnails-fluid li {
+	padding: 0 20px !important;
+}
+
+body ul.wpb_thumbnails-fluid li:first-of-type {
+	padding-left: 0 !important;
+	padding-right: 20px !important;
+}
+
+body ul.wpb_thumbnails-fluid li:last-of-type {
+	padding-left: 20px !important;
+	padding-right: 0 !important;
+}
+
+/* featured speakers
+--------------------------------------------- */
+
+.wa_rhps_image_carousel li {
+	margin: 0 15px !important;
+}
+
+.wa_rhps_foo_con {
+	overflow: visible !important;
+	color: #fff !important;
+}
+
+.caroufredsel_wrapper {
+	width: 486px !important;
+}
+
+.wa_rhps_slider_title {
+	height: 60px !important;
+	overflow: visible;
+	line-height: 1.0 !important;
+	padding-top: 12px;
+}
+
+.wa_rhps_slider_title a {
+	color: white;
+	line-height: 1;
+}
+
+.wa_rhps_image_carousel {
+	padding: 0 10px 15px 20px !important;
+}
+
+.wa_rhps_image_carousel .wa_rhps_prev, .wa_rhps_image_carousel .wa_rhps_next,
+.wa_rhps_image_carousel .wa_rhps_pagination a,
+.wa_rhps_image_carousel .wa_rhps_pagination a.selected {
+	background-image: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/carousel_control.png) !important;
+}
+
+.wa_rhps_image_carousel .wa_rhps_pagination {
+	text-align: right;
+	margin: 0 auto;
+	/* margin: 20px; */
+	padding-top: 2px;
+	position: absolute;
+	top: -64px;
+	right: 40px;
+}
+
+/* inside pages
+--------------------------------------------- */
+.upcoming-forums {
+	padding: 24px;
+	line-height: 1;
+	color: white;
+}
+
+.entry-content .upcoming-forums p {
+	font-size: 20px;
+}
+
+.entry-content .upcoming-forums ul {
+	border-top: 1px solid #99A4AE;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.entry-content .upcoming-forums ul li {
+	display: block;
+	padding: 12px 0;
+	border-bottom: 1px solid #99A4AE;
+	line-height: 1.625;
+	font-size: 14px;
+}
+
+.entry-content .speaker-meta ul {
+	margin-left: 0 !important;
+	margin-bottom: .5rem;
+}
+
+.entry-content .speaker-meta ul > li {
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+
+.inpage-link {
+	width: 300px;
+	float: right;
+	text-align: right;
+	font-size: 12px;
+	padding-bottom: 6px;
+}
+
+.featured-content .entry {
+	float: left;
+	width: 30%;
+	margin-left: 48px; 
+}
+
+.featured-content .entry:first-of-type {
+	margin-left: 0;
+}
+
+.featured-content .entry-header {
+	background: none;
+	padding: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.featured-content .entry-title {
+	padding: 0 !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+}
+
+.featured-content .entry-content h2 {
+	padding-bottom: 0 !important;
+}
+
+.featured-content .entry-content {
+	padding: 0;
+}
+
+
+/* speakers list
+--------------------------------------------- */
+#sponsorblock {
+	border-top: 1px solid #99a4ae;
+	padding-top: 12px;	
+	width: 100%;
+	clear: both;
+}
+
+body.sponsorspage #sponsorblock {
+	display: none;
+}
+
+.speakerpagelink {
+	padding: 20px 0;
+}
+
+.clientsnav {
+	padding: 20px 0 20px 60px;
+}
+
+#speaker-list {
+}
+
+.speaker-short {
+	padding: 10px 10px 10px 0;
+	border-bottom: 1px solid rgba(153,164,174,.2);
+	border-bottom: 1px solid #E9EBED\9;
+	min-height: 230px;
+	line-height: 1.2;
+}
+
+#featured-speakers .speaker-short {
+	min-height: 265px;
+}
+
+
+.speaker-name {
+	font-weight: 700;
+}
+
+.entry-content .speaker-short p {
+	margin-bottom: 0;
+}
+
+.speaker-search {
+	width: 60%;
+	float: right;
+	margin-right: -200px;
+}
+
+.full-speaker-list h2 {
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+.full-speaker-list input[type="text"] {
+	background: rgba(153,164,174,.35) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/mag-glass.png) right center no-repeat;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/search-bkgd.jpg) right center no-repeat\9;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+	border-radius: 8px;
+	color: #55697A;
+	border: none;
+	font-size: 12px;
+	padding: 8px;
+	width: 60%;
+	float: left;
+}
+
+.full-speaker-list input[type="submit"] {
+	padding: 8px;
+	float: right;
+	border-radius: 8px;
+}
+
+#the-panel:before {
+	content: " ";
+	display: table;
+}
+
+#the-panel:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.panel-member {
+	text-align: center;
+	width: 15%;
+	float: left;
+	margin-right: 20px;
+	font-size: 14px;
+	min-height: 150px;
+}
+
+span.speakername {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+
+/* events
+--------------------------------------------- */
+/*.css-events-list {
+	display: none;
+}*/
+
+.the-event:before,
+.event-entry:before,
+#speaker-events:before {
+	content: " ";
+	display: table;
+}
+
+.the-event:after,
+.event-entry:after,
+#speaker-events:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.the-event {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 24px;
+}
+
+.event-timeloc {
+	width: 25%;
+	float: left;
+}
+
+.event-details {
+	width: 65%;
+	float: left;
+	margin-left: 20px;
+}
+
+body.single-event h5 {
+	padding-top: 20px;
+}
+
+body.agenda h3 {
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	font-weight: bold;
+	color: #9AA5AE;
+}
+
+body.agenda .event-details h5 {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+body.agenda .event-details h5 a {
+	color: #333F48;
+}
+
+body.agenda .event-details li, body.agenda .event-details .speaker-text {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+body.agenda .event-details .speaker-text {
+	font-weight: bold;
+}
+
+body.agenda .event-details .speaker-meta ul {
+	margin-bottom: 10px;
+}
+
+body.agenda .event-details .speaker-meta li {
+	font-weight: normal;
+	color: #7A8085;
+}
+
+#2015-04-27 {
+	display: block;
+	margin-top: -50px;
+	height: 1px;
+}
+
+.modselect {
+	display: block;
+	padding: 6px 0;
+}
+
+/* sponsors pages
+--------------------------------------------- */
+
+.sponsor-featured:before {
+	content: " ";
+	display: table;	
+}
+
+.sponsor-featured:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.sponsor-featured {
+	margin-bottom: 40px;
+}
+
+h4.sponsor-name {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+p.sponsor-name {
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.sponsor-featured-logo {
+	width: 300px;
+	min-height: 100px;
+	float: left;
+}
+
+.sponsor-featured-info {
+	width: 630px;
+	float: right;	
+}
+
+.sponsor-strategic {
+	margin-top: 30px !important;
+}
+
+.sponsor-strategic .sponsor-featured-info {
+	width: 100%;
+	float: none;
+}
+
+
+#strategic-sponsors .sponsor-featured-logo, #collaborate-sponsors .sponsor-featured-logo, #affiliate-sponsors .sponsor-featured-info {
+	text-align: center;
+}
+
+#strategic-sponsors .sponsor-featured-info {
+	text-align: left;
+}
+
+
+/* sponsor in footer
+--------------------------------------------- */
+
+.static-sponsor {
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+
+.sponsors-footer-title h4.widget-title.widgettitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 20px 0px 0px 0px;
+}
+
+body.home .sponsors-footer-title h4.widget-title.widgettitle {
+	padding-left: 30px;
+}
+
+.sponsor-home-feature {
+	padding: 10px 0 20px;
+	float: left;
+	width: 20%;
+	margin: 0 2%;
+}
+
+.sponsor-home-feature h4.widgettitle, .sponsor-home-carousel h4.widgettitle {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0 !important;
+}
+
+.presenting {
+	width: 100%;
+	text-align: center;
+	clear: both;
+}
+
+.stakeholder img {
+	width: 100%;
+}
+
+.collaborator img, .collaborator-shim img {
+	width: 80%;
+	margin-top: 10px;
+}
+
+.collaborator-shim img {
+	margin-top: 26px;
+}
+
+section.sponsor-carousel {
+	float: right;
+	width: 720px;
+	margin-top: 40px;
+}
+
+body.home section.sponsor-carousel {
+	margin-top: 54px;
+	margin-right: 50px;
+}
+
+.sponsors-row-two {
+	width: 20%;
+	margin: 0px 15% 0px 15%;
+	float: left;
+}
+
+.sponsors-row-two.bristol {
+	margin: 0px 5% 0px 25%;
+}
+
+.sponsors-row-two.takeda {
+	margin: 0px 25% 0px 5%;
+}
+
+.sponsors-row-three {
+    width: 13%;
+    float: left;
+    margin: 20px 6%;
+}
+
+body.home .sponsors-row-three {
+    width: 11% !important;
+    float: left;
+    margin: 20px 7% !important;
+}
+
+body.home .sponsors-row-three:nth-of-type(4n+0), .sponsors-row-three:nth-of-type(4n+0) {
+	margin-bottom: 30px !important;
+}
+
+/* if we go back to carousel
+--------------------------------------------- */
+
+/*
+.sponsor-home-carousel {
+	float: right;
+	width: 640px;
+	margin-top: 20px;
+	margin-right: 18px;
+}
+*/
+
+/*
+.sponsor-home-carousel .soliloquy-item, #soliloquy-container-846 .soliloquy-item {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	margin-right: 7px !important;
+	margin-left: 7px !important;
+*/
+/* 	border-left: 1px solid #99A4AE; */
+/* 	border-right: 1px solid #99A4AE;
+}*/
+
+/* .sponsor-home-carousel .soliloquy-container, #soliloquy-container-846 .soliloquy-container, .soliloquy-container { */
+/* 	border-left: 1px solid #99A4AE; */
+/* 	border-right: 1px solid #99A4AE; */
+/*
+	clear: both;
+}
+*/
+
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Genesis
+--------------------------------------------- */
+
+.breadcrumb {
+	margin-bottom: 20px;
+}
+
+.author-box {
+	background-color: #fff;
+	font-size: 16px;
+	margin-bottom: 40px;
+	padding: 40px;
+}
+
+.author-box-title {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+	overflow: hidden;
+}
+
+.site-header .search-form {
+	float: right;
+}
+
+.entry-content .search-form,
+.site-header .search-form {
+	width: 60%;
+}
+
+.genesis-nav-menu .search input[type="submit"],
+.widget_search input[type="submit"] {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* ## Titles
+--------------------------------------------- */
+
+.archive-title,
+.entry-title {
+	font-size: 36px;
+}
+
+.archive-title,
+body.page .entry-title,
+.entry-title {
+	font-size: 22px;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 0;
+	letter-spacing: 3px;
+}
+
+body.single-post .entry-title {
+	padding-bottom: 0;
+}
+
+body.single-post h1.entry-title {
+	margin-bottom: 0;
+}
+
+.entry-content h2 {
+	font-family: Arial !important;
+	font-size: 20px !important;
+	color: #99A4AE;
+	font-weight: 700 !important;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.media-coverage h2 {
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.entry-content .full-speaker-list h2 {
+	margin-bottom: 36px;
+}
+
+.entry-title a,
+.sidebar .widget-title a {
+	color: #333;
+}
+
+.entry-title a:hover {
+	color: #e5554e;
+}
+
+p.readmorelink {
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.widget-title {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.footer-widgets .widget-title {
+	color: #fff;
+}
+
+/* ## WordPress
+--------------------------------------------- */
+
+a.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+a.alignnone {
+	display: inline-block;
+}
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 100%;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 24px;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 12px;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+	margin: 0 24px 24px 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+	margin: 0 0 24px 24px;
+}
+
+.wp-caption-text {
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+	margin-bottom: 0;
+}
+
+.sticky {
+}
+
+
+/* # Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+	word-wrap: break-word;
+}
+
+.widget ol > li {
+	list-style-position: inside;
+	list-style-type: decimal;
+	padding-left: 20px;
+	text-indent: -20px;
+}
+
+.widget li li {
+	border: none;
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+.widget_calendar table {
+	width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+}
+
+/* ## Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+	border-bottom: 2px solid #f5f5f5;
+	margin-bottom: 20px;
+	padding: 0 0 24px;
+}
+
+.footer-widgets .entry {
+	border-bottom: 1px dotted #666;
+}
+
+.featured-content .entry-title {
+	font-size: 20px;
+}
+
+
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Jetpack
+--------------------------------------------- */
+
+#wpstats {
+	display: none;
+}
+
+
+/* # Site Header
+--------------------------------------------- */
+
+.site-header {
+	min-height: 160px;
+}
+
+.site-header .wrap {
+	padding: 0;
+	background: rgb(255,255,255);
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+	float: left;
+	width: 46%;
+}
+
+.header-full-width .title-area {
+	width: 100%;
+}
+
+.site-title {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.site-title a,
+.site-title a:hover {
+	color: #333;
+}
+
+.header-image .site-title > a {
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/partners-forum-logo.svg) no-repeat right;
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/partners-forum-logo.png) no-repeat right\9;
+	float: left;
+	min-height: 256px;
+	width: 100%;
+}
+
+.site-description {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+	display: block;
+	text-indent: -9999px;
+}
+
+/* ## Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	text-align: right;
+	width: 54%;
+	padding-right: 70px;
+}
+
+
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+.genesis-nav-menu {
+	clear: both;
+	font-size: 16px;
+	line-height: 1;
+	width: 100%;
+}
+
+.genesis-nav-menu.menu-primary {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.site-header .genesis-nav-menu {
+	font-size: 12px;
+}
+
+.genesis-nav-menu .menu-item {
+	display: inline-block;
+	text-align: left;
+}
+
+.genesis-nav-menu a {
+	color: #333;
+	display: block;
+	padding: 10px 24px;
+}
+
+.site-header .genesis-nav-menu a {
+	color: rgb(153,164,174);
+}
+
+.site-header .header-nav .genesis-nav-menu a {
+	padding: 0 24px;
+}
+
+.site-header .header-nav ul {
+	padding-top: 60px;
+}
+
+.site-header .header-nav li#menu-item-552 {
+	border-left: 1px solid #99A4AE;	
+	border-right: 1px solid #99A4AE;	
+}
+
+.site-header .social-nav {
+	margin-bottom: 26px;
+}
+
+.site-header .social-nav ul#menu-social-media {
+	padding: 20px 0;
+}
+
+.site-header .social-nav .genesis-nav-menu li {
+	display: block;
+	width: 46px;
+	float: right;
+}
+
+.site-header .social-nav .genesis-nav-menu li a {
+	padding: 0 8px;
+	margin-top: 2px;
+}
+
+.site-header .social-nav .genesis-nav-menu li.twitter a {
+	margin-top: 0;
+}
+
+.site-header .social-nav .genesis-nav-menu li.linkedin .icon-2x {
+	font-size: 17px;
+	font-size: 1.7rem;
+}
+
+.site-header .social-nav .genesis-nav-menu li.twitter .icon-2x {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.site-header .icon-linkedin {
+	background-color: #99A4AE;
+	color: white;
+	padding: 4px 6px;
+	border-radius: 3px;
+}
+
+.site-header .icon-twitter {
+	padding: 6px;
+}
+
+.site-header .event-date-header {
+	clear: both;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	padding: 20px 0 0;
+	font-size: 23px;
+	color: #99A4AE;
+	height: 86px;
+}
+
+.site-header .widget_search {
+	clear: both;
+}
+
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	color: #007398;
+}
+
+.site-header .social-nav .genesis-nav-menu li.linkedin a:hover {
+	color: #007398;
+}
+
+.genesis-nav-menu .sub-menu {
+	left: -9999px;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: opacity .4s ease-in-out;
+	-moz-transition:    opacity .4s ease-in-out;
+	-ms-transition:     opacity .4s ease-in-out;
+	-o-transition:      opacity .4s ease-in-out;
+	transition:         opacity .4s ease-in-out;
+	width: 200px;
+	z-index: 99;
+}
+
+.genesis-nav-menu .sub-menu a {
+	background-color: rgba(0,114,151,.8);
+	background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/subnav-bkgd.png) repeat\9;
+	text-transform: none;
+	font-size: 14px;
+	padding: 20px;
+	position: relative;
+	width: 200px;
+}
+
+.genesis-nav-menu .sub-menu .sub-menu {
+	margin: -55px 0 0 199px;
+}
+
+.genesis-nav-menu .menu-item:hover {
+	position: static;
+}
+
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+	left: auto;
+	opacity: 1;
+}
+
+.genesis-nav-menu > .first > a {
+	padding-left: 0;
+}
+
+.genesis-nav-menu > .last > a {
+	padding-right: 0;
+}
+
+.genesis-nav-menu > .right {
+	color: #fff;
+	float: right;
+	list-style-type: none;
+	padding: 30px 0;
+}
+
+.genesis-nav-menu > .right > a {
+	display: inline;
+	padding: 0;
+}
+
+.genesis-nav-menu > .rss > a {
+	margin-left: 48px;
+}
+
+.genesis-nav-menu > .search {
+	padding: 10px 0 0;
+}
+
+/* added per http://ozzyrodriguez.com/tutorials/genesis/genesis-responsive-menu-2-0/
+----------------------------------------------------------------------------------- */
+nav {
+	clear: both;
+}
+
+.sub-menu-toggle,
+.menu-toggle {
+	display: none;
+	visibility: hidden;
+}
+
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+.site-header .sub-menu {
+	border-top: 1px solid #eee;
+}
+
+.site-header .sub-menu .sub-menu {
+	margin-top: -56px;
+}
+
+.site-header .genesis-nav-menu li li {
+	margin-left: 0;
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	background: transparent;
+}
+
+.nav-primary .wrap {
+	background: white;
+}
+
+.nav-primary .genesis-nav-menu a {
+	color: #444F51;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	letter-spacing: .1rem;
+}
+
+.nav-primary .genesis-nav-menu .sub-menu a {
+	color: white;
+	text-transform: none;
+}
+
+.nav-primary .genesis-nav-menu a:hover,
+.nav-primary .genesis-nav-menu .current_page_parent a,
+.nav-primary .genesis-nav-menu .current-menu-item a {
+	color: #007398;
+}
+
+.nav-primary .genesis-nav-menu .current-menu-item ul.sub-menu li a {
+	color: #fff;
+}
+
+.nav-primary .genesis-nav-menu .current_page_parent .sub-menu a {
+	color: white !important;
+}
+
+.nav-primary .genesis-nav-menu .sub-menu a:hover {
+	color: white;
+	background: #689CB1;
+}
+
+/* ## Secondary Navigation
+--------------------------------------------- */
+
+.nav-secondary {
+	background-color: #fff;
+}
+
+
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Entries
+--------------------------------------------- */
+
+#post-thumbnail {
+	/* width: 100%; */
+	height: 250px;
+	background: #333E48;
+}
+
+.entry {
+	margin-bottom: 40px;
+}
+
+.archive-description,
+.entry-header,
+body.single-event h1.entry-title {
+	padding: 0px 60px;
+	background: #007297 url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/entry-header-globe.svg) center 186px;
+	background: #007297 url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/entry-header-globe.gif) center top\9;
+	background-size: 1100px 360px;
+	background-size: auto\9;
+	margin-bottom: 36px;
+}
+
+.category-blog .entry-header {
+	min-height: 44px;
+}
+
+body.single-event h1.entry-title {
+	padding: 10px 60px;
+}
+
+.entry-content {
+	padding: 0px 60px;
+}
+
+.entry-content p {
+	font-size: 13px;
+	font-size: 1.3rem;
+	margin-bottom: 12px;
+}
+
+.content .entry {
+	background-color: #fff;
+}
+
+.entry-content ol,
+.entry-content ul {
+	margin-bottom: 28px;
+	margin-left: 40px;
+}
+
+.entry-content ol > li {
+	list-style-type: decimal;
+}
+
+.entry-content ul > li {
+	list-style-type: disc;
+}
+
+.entry-content ol ol,
+.entry-content ul ul {
+	margin-bottom: 0;
+}
+
+.entry-content code {
+	background-color: #333;
+	color: #ddd;
+}
+
+.photo-gallery-archive {
+	width: 22%;
+	float: left;
+	margin: 30px 20px 30px 0;
+}
+
+.photo-gallery-archive:nth-child(5n) {
+	margin-right: 0;
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+body.single-post p.entry-meta {
+	color: white;
+	padding-bottom: 10px;
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 18px;
+	color: #000;
+}
+
+.entry-header .entry-meta span {
+	display: block;
+}
+
+.entry-header .entry-meta.top {
+	margin-bottom: 0;
+	font-weight: bold;
+	color: #333E47;
+	font-size: 14px;
+}
+
+.blog-authors {
+	display: block;
+	font-weight: normal;
+}
+
+.entry-footer .entry-meta {
+	border-top: 2px solid #f5f5f5;
+	padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+#story-link {
+	font-size: 14px;
+	padding: 0 0 20px 0;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	margin: 40px 0;
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination li {
+	display: inline;
+}
+
+.archive-pagination li a {
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	padding: 8px 12px;
+}
+
+.archive-pagination li a:hover,
+.archive-pagination .active a {
+	background-color: #e5554e;
+}
+
+/*	Archive page
+--------------------------------------------- */
+
+body.archive .entry-title {
+	color: black;
+	text-transform: none;
+	letter-spacing: 0;
+	padding-top: 6px !important
+}
+
+body.archive.category-news article {
+	float: left;
+	width: 26%;
+	margin-left: 60px;
+	min-height: 370px;
+}
+
+body.archive.category-blog article {
+	margin: 0px 60px 30px 60px;
+}
+
+.archive article.third {
+	float: right;
+	margin-left: 0;
+	margin-right: 60px;	
+}
+
+body.archive .entry-title {
+	line-height: 1;
+}
+
+body.archive article p {
+	margin-bottom: 0;
+}
+
+body.archive .entry-title a {
+	color: #007398;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+body.archive h2.entry-title a {
+	font-weight: bold;
+    font-size: 16px;
+}
+
+body.archive .entry-title a:hover, body.archive .entry-title a:focus {
+	color: #333E48;
+}
+
+body.archive .entry-header {
+	padding: 0;
+}
+
+body.archive.category .entry-header {
+	margin-bottom: 10px;
+	background: none;
+}
+
+body.archive p {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+body.archive.category .entry-header h2.entry-title {
+	margin-bottom: 0;
+	padding-bottom: 0;	
+}
+
+.clientsnav {
+	clear: both;
+}
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+	font-size: 16px;
+	color: rgb(255,255,255);
+}
+
+.sidebar li {
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.sidebar p:last-child,
+.sidebar ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar .widget {
+	background-color: rgb(51,62,72);
+	margin-bottom: 40px;
+	padding: 18px;
+}
+
+h4.widgettitle {
+	color: #99A4AE;
+	font-size: 25px;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	clear: both;
+}
+
+.footer-widgets .wrap {
+	background: rgb(51,62,72) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/footer-globe.svg);
+	background: rgb(51,62,72) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/footer-globe.png)\9;
+	background-size: cover;
+}
+
+.footer-widgets,
+.footer-widgets a {
+	color: #999;
+}
+
+.footer-widgets input {
+	border: 1px solid #333;
+}
+
+.footer-widgets a.button,
+.footer-widgets a:hover {
+	color: #fff;
+}
+
+.footer-widgets li {
+	border-bottom: none;
+	margin-bottom: 10px;
+}
+
+.footer-widgets .widget {
+	margin-bottom: 40px;
+}
+
+.footer-widgets p:last-child {
+	margin-bottom: 0;
+}
+
+.footer-widgets-1 {
+	width: 100%;
+	padding: 40px 80px 0;
+	text-align: center;
+}
+
+/*
+.footer-widgets-1 {
+	float: left;
+	width: 550px;
+	padding: 10px 0 10px 80px;
+}
+*/
+
+ .footer-widgets-2 {
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.footer-widgets ul#menu-primary-navigation-1 li a {
+	color: rgb(153,164,174);
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.footer-widgets ul#menu-primary-navigation-1 li.menu-item {
+	display: block;
+	float: left;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.footer-widgets #menu-primary-navigation-1 ul.sub-menu li {
+	text-transform: none;
+	margin-left: 8px;
+	width: 100%;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.footer-widgets-2 .partners {
+	width: 40%;
+	float: left;
+	margin-left: 55px;
+}
+
+.footer-widgets-2 .affils {
+	width: 13%;
+	float: left;
+	margin-top: 20px;
+}
+
+.footer-widgets-2 .footer-logos .widget-1 {
+	margin-top: 20px;
+}
+
+.footer-logos, .footer-logos a {
+	color: white;
+	font-weight: 300;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.footer-logos i {
+	display: block;
+}
+
+.footer-partnerslogo {
+	padding: 15px 0 0;
+}
+
+.footer-widgets li.menu-register {
+	width: 8%;
+}
+
+.footer-widgets li.menu-event {
+	width: 14%;
+}
+
+.footer-widgets li.menu-partners {
+	width: 23%;
+}
+
+.footer-widgets li.menu-agenda {
+	width: 10%
+}
+
+.footer-widgets li.menu-agenda {
+	width: 10%
+}
+
+.footer-widgets li.menu-speakers {
+	width: 10%
+}
+
+.footer-widgets li.menu-sponsors {
+	width: 10%
+}
+
+.footer-widgets li.menu-travel {
+	width: 10%
+}
+
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+	background: transparent;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+}
+
+.site-footer p {
+	margin-bottom: 0;
+}
+
+.site-footer .wrap {
+	padding: 10px 0 30px;
+}
+
+
+/* hide slicknav */
+.slicknav_menu {
+	display:none;
+}
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+/* Navigation toggles - Ensure Menu Displays when Scaled Up
+--------------------------------------------- */
+/*
+@media only screen and (max-width: 1200px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 960px;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		width: 740px;
+	}
+
+	.content,
+	.site-header .widget-area {
+		width: 620px;
+	}
+
+	.sidebar-content-sidebar .content,
+	.sidebar-sidebar-content .content,
+	.content-sidebar-sidebar .content {
+		width: 400px;
+	}
+
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3,
+	.sidebar-primary,
+	.title-area {
+		width: 300px;
+	}
+
+	.footer-widgets-1 {
+		margin-right: 30px;
+	}
+
+}
+*/
+
+/* DESKTOP full width - hide mobile menu */
+@media only screen
+and (min-width: 1101px) {
+	#menu-mobile {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+
+/* Shrunken DESKTOP portal & Tablets break point */
+@media only screen
+and (min-width: 768px)
+and (max-width: 1100px) {
+	nav {
+		display: block !important;
+	}
+	
+	.title-area {
+		width: 100%;
+	}
+	
+	#menu-mobile {
+		display: none;
+	}
+	
+	.header-image .site-title > a {
+		background-position: center center;
+		min-height: 165px;
+	}
+	
+	.site-header .widget-area {
+		padding-right: 0;
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+	
+	.site-header .widget-area .header-nav {
+		width: 58%;
+		float: left;
+		margin-top:5px;
+		margin-left:15%
+	}
+
+	.site-header .header-nav ul {
+		padding-top: 0;
+	}
+
+	.site-header .widget-area .social-nav {
+		width: 15%;
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.site-header .social-nav ul#menu-social-media {
+		padding: 0;
+	}
+	
+	.site-header .header-nav .genesis-nav-menu a {
+		padding: 0 5px;
+	}
+	
+	.site-header .widget_search {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	.site-header .search-form {
+		width: 100%;
+	}
+	
+	.site-header .event-date-header {
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		height: 60px;
+		font-size: 1.6rem;
+	}
+	
+	#post-thumbnail {
+		height: auto;
+		background: #333E48;
+	}
+	
+	.genesis-nav-menu.menu-primary {
+		width: 100%;
+	}
+	
+	.genesis-nav-menu .menu-item {
+		text-align: center;
+	}
+	
+	.nav-primary .wrap {
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+		white-space: nowrap;
+		width: 100%;
+	}
+	
+	.nav-primary ul {
+		display: table-row;
+		white-space: nowrap;
+	}
+	
+	.genesis-nav-menu .menu-item {
+		display: table-cell;
+	}
+	
+	.genesis-nav-menu a {
+		padding: 16px 12px
+	}
+	
+	.nav-primary .genesis-nav-menu a {
+		letter-spacing: 0;
+	}
+	
+	.genesis-nav-menu ul.sub-menu .menu-item {
+		display: block;
+	}
+	
+	.genesis-nav-menu .sub-menu a {
+		width: 280px;
+		text-align: left;
+	}
+	
+	.genesis-nav-menu .menu-sponsors.menu-item:hover > .sub-menu,
+	.genesis-nav-menu .menu-travel.menu-item:hover > .sub-menu {
+		right: 8%;
+	}
+	
+	.home-slides, .innovation-brief {
+		width: 100%;
+		float: none;
+		height: auto;
+		margin-top: 0;
+	}
+	
+	.register-button, .fivews-button, .agenda-button {
+		height: 140px;
+		background-size: 100%;
+	}
+	
+	.home-hero.widget-area h2 {
+		margin: 1.6rem 0 .6rem;
+	}
+	
+	.home-hero.widget-area {
+		height: 320px;
+		padding: 125px 15px 0;
+	}
+	
+	.register-button {
+		margin-right: 2%;
+	}
+
+	.register-button, .fivews-button, .agenda-button {
+		width: 32%;
+	}
+	
+	.sponsor-home-feature {
+		padding-top: 0;
+		width: 100%;
+	}
+
+	.sponsor-home-feature.presenting {
+		margin-left: 2%;
+	}
+
+	.entry-content {
+		padding: 0 20px;
+	}
+
+	.sponsor-home-feature h4.widgettitle, .sponsor-home-carousel h4.widgettitle {
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 0 !important;
+	}
+	
+	.email-signup .gform_wrapper .gform_heading {
+		width: 64%;
+	}
+	
+	.email-signup .gform_body {
+		width: 29%;
+	}
+	
+	.email-signup .gform_wrapper h3.gform_title {
+		font-size: 24px;
+	}
+	
+	.email-signup .gform_description {
+		font-size: 14px;
+	}
+	
+	.presenting img,  {
+		width: 100%;
+	}
+	
+	.stakeholder img {
+		margin-top: 14px;
+	}
+	
+	
+	.collaborator img, .collaborator-shim img {
+		width: 80%;
+		margin-top: 20px;
+	}
+	
+	.collaborator-shim img {
+		margin-top: 34px;
+	}
+	
+	.footer-widgets-1 {
+		width: 60%;
+		margin: 0 auto;
+		padding: 30px 0;
+		float: none;
+	}
+	
+	.footer-widgets-2 {
+		width: 100%;
+		margin: 0 auto;
+		padding: 10px 0;
+		float: none;
+	}
+
+	.footer-widgets .wrap, .footer-widgets-1 .footer-logos, .footer-widgets-2 .footer-logos {
+		background-position: center top;
+		text-align: center;
+	}
+
+	.footer-widgets-2 .partners {
+		display: block;
+		clear: both;
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	
+	.footer-widgets-2 .affils  {
+		display: block;
+		width: 44%;
+		float: left;
+		margin: 10px 20px;
+		text-align: center;
+	}
+	
+	.footer-widgets-2 .footer-logos .widget-1 {
+		margin-top: 200px;
+	}
+
+	section.sponsor-carousel {
+		float: right;
+		width: 540px;
+		margin-top: 0px;
+	}
+	
+	body.home section.sponsor-carousel {
+		margin-top: 4px;
+		margin-right: 10px;
+	}
+	
+	body.archive.category-blog article {
+		width: 90%;
+		margin: 0px 5% 30px;
+	}
+
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.footer-widgets-2 .footer-logos {
+		padding-top: 20px;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	.entry-header,
+	.archive-description {
+		padding: 60px 20px 0 !important;
+	}
+}
+
+/* iphones and stupidly small desktop portals for morons */
+@media only screen and (max-width: 767px) {
+
+
+	/* Start Mobile Menu Navigation - Only on .nav-primary
+	 --------------------------------------------------- */
+
+	/* Hide .nav-primary */
+	.nav-primary .genesis-nav-menu.displaynone {
+		display: none;
+	}
+	
+	#menu-mobile {
+		display: block;
+		visibility: visible;
+	}
+
+	.mobile-menu-title {
+		font-family: 'Palatino', serif;
+		font-size: 14px !important;
+	}
+
+	.nav-primary,
+	.nav-primary .genesis-nav-menu .current_page_parent a,
+	.nav-primary .genesis-nav-menu .current-menu-item a {
+		background: #9AA4AE;
+		color: #1e1e1e;
+		text-align: center;
+	}
+
+	.nav-primary .genesis-nav-menu a {
+		background-color: rgba(0,114,151,.8);
+		color: white;
+	}
+
+	.genesis-nav-menu .sub-menu a, .nav-primary .genesis-nav-menu .current_page_parent .sub-menu a {
+		background-color: white;
+		color: #444F51 !important;
+	}
+
+	.nav-primary #menu-mobile {
+		background-color: #9AA4AE;
+		color: #fff;
+		font-weight: bold;
+		cursor: pointer;
+		display: block;
+		font-size: 18px;
+		font-size: 1.8rem;
+		height: auto;
+		line-height: 18px;
+		padding: 20px 16px;
+		padding: 2rem 1.6rem;
+		text-transform: uppercase;
+	}
+
+	.nav-primary #menu-mobile:hover,
+	.nav-primary #menu-mobile:focus,
+	.nav-primary #menu-mobile:active {
+		background-color: #9AA4AE;
+		color: #fff;
+		display: block;
+	}
+
+	/* Only .nav-primary is mobile */
+	.nav-primary .genesis-nav-menu .menu-item,
+	.nav-primary .genesis-nav-menu a,
+	.nav-primary .genesis-nav-menu .sub-menu {
+		text-align: center;
+		width: 100%;
+	}
+
+	.nav-primary .genesis-nav-menu .menu-item > .sub-menu {
+		clear: both;
+		margin: 0;
+		opacity: 1;
+		position: inherit;
+		width: 100%;
+	}
+	
+	.menu-icon {
+		font-size: 28px;
+		line-height: 10px;
+		display: inline-block;
+		padding-right: 4px;	
+	}
+
+	.menu-title {
+		display: inline-block;
+		line-height: 24px;
+	}
+	
+ /* end mobile nav */
+
+
+	body {
+		background-color: #fff;
+		font-size: 16px;
+	}
+
+	#post-thumbnail {
+		display: none;
+	}
+	
+	body.archive.category-news article {
+		min-height: 0 !important;
+	}
+	
+	.speaker-head img {
+		max-width: 140px;
+	}
+
+	.site-container {
+		width: 100%;
+	}
+
+	.title-area {
+		width: 100%;
+		float: none;
+	}
+	
+	.site-header {
+		min-height: 90px;
+	}
+	
+	.widget-area.header-widget-area {
+		width: 100%;
+		padding-right: 0;
+	}
+	
+	.site-header .widget-area {
+		text-align: center;
+		float: none !important;
+	}
+	
+	ul#menu-social-media {
+		width: 15%;
+		margin: 0 auto;
+	}
+	
+	.site-header .search-form {
+		width: 60%;
+		margin: 0 auto;
+		float: none;
+	}
+	
+	#post-thumbnail {
+		height: 73px !important;
+	}
+	
+	.entry-header,
+	.archive-description {
+		padding: 0 20px !important;
+	}
+	
+	body.single-event h1.entry-title {
+		padding: 10px 20px !important;
+	}
+	
+	.home-slides, .innovation-brief {
+		width: 100%;
+		float: none;
+		height: auto;
+		margin-top: 0;
+		padding: 40px 20px 31px;
+	}
+	
+	.home-slides {
+		padding: 0;
+	}
+
+	div#soliloquy-container-785.soliloquy-container.soliloquy-transition-fade.soliloquy-fade.soliloquy-theme-base {
+		margin-bottom: 0 !important;
+	}
+
+	.email-signup {
+		height: auto;
+		padding: 12px 20px;
+	}
+
+	.email-signup .gform_wrapper .gform_heading {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	
+	.email-signup .gform_body {
+		float: none;
+		width: 100%;
+	}
+	
+	.email-signup .gform_wrapper .gform_footer {
+		float: none;
+		text-align: center;
+	}
+
+	.home-sponsor {
+		background-image: none;
+		background-color: #FFF;
+		height: 160px;
+	}
+	
+	.sponsor-home-carousel h4.widgettitle {
+		padding: 12px 0 0 20px;
+	}
+
+	.home-date {
+		background-image: none;
+		background-color: #6BA0B9;
+		height: 110px;
+	}
+
+	.attendee-image {
+		margin-top: 0;
+	}
+	
+	.attendee-image .forumdate h2 {
+		padding-top: 7px;
+	}
+
+	.site-inner,
+	.wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.header-image .site-title > a {
+		background-size: auto;
+		min-height: 230px;
+		background-position: center center;
+	}
+
+	.home-hero.widget-area {
+		height: auto;
+		background-attachment: scroll;
+	}
+
+	.sponsor-home-feature {
+		padding-top: 0;
+		float: none;
+		width: 60% !important;
+		margin: 20px auto 0;
+	}
+	
+	.site-header .header-nav ul {
+		padding-top: 0;
+	}
+	
+	section.sponsor-carousel {
+		float: none;
+		width: 720px;
+		margin: 10px 0 0;
+	}
+	
+	body.home section.sponsor-carousel {	
+		width: 720px;
+		margin-left: 24px;
+		margin-top: 20px;
+	}
+	
+	#post-thumbnail {
+		height: auto;
+	}
+	
+	body.archive.category .entry-header {
+		padding: 0 !important;
+	}
+	
+	.archive-description,
+	.author-box,
+	.comment-respond,
+	.entry,
+	.entry-comments,
+	.entry-pings,
+	.sidebar .widget,
+	.site-header {
+		padding: 0;
+	}
+
+	.archive-pagination li a {
+		margin-bottom: 4px;
+	}
+
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds,
+	.archive article {
+		margin: 0;
+		width: 100%;
+	}
+
+	.archive article,
+	.archive article.third {
+		padding: 0 20px;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+
+	.sidebar .widget.enews-widget {
+		padding: 40px;
+	}
+	
+	.home-hero.widget-area {
+		padding: 10px;
+	}
+	
+	.home-hero.widget-area h2 {
+		margin-top: 0;
+	}
+	
+	.register-button, .fivews-button, .agenda-button {
+		width: 100%;
+		float: none;
+		padding: 20px 10px 20px;
+		margin-bottom: 10px;
+	}
+	
+	.entry-content {
+		padding: 0 20px;
+	}
+	
+	.internal-register-button {
+		margin-top: 20px;
+	}
+	
+	.wpb_row {
+		margin-bottom: 0 !important;
+	}
+	
+	#sponsorblock {
+		margin-top: 20px;
+	}
+	
+	#featured-speakers .speaker-short {
+		min-height: intrinsic;
+		text-align: center;
+	}
+	
+	.speaker-short {
+		min-height: intrinsic;
+	}
+	
+	.entry-content .full-speaker-list h2 {
+		width: 100%;
+	}
+	
+	.speaker-search {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+	
+	.sponsor-featured-logo, .sponsor-featured-info {
+		width: auto;
+		float: none;
+	}
+	
+	.full-speaker-list input[type="text"] {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+	
+	.footer-widgets-1, .footer-widgets-2 {
+		text-align: center;
+		float: none;
+		padding: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.forumdate {
+		top: 0;
+		padding: 10px 30px 14px;
+	}
+	
+	.footer-widgets .widget {
+		margin-bottom: 10px;
+	}
+	
+	.footer-widgets-1 .footer-logos {
+		background-position: center top;
+		background-size: 80%;
+	}
+	
+	.footer-widgets-2 .footer-logos {
+/*
+		background: url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/affiliates-logos-stacked.svg) center 2px no-repeat;
+		background-size: 90%;
+		padding: 214px 10px 20px;
+		margin-bottom: 10px;
+		margin-top: 30px;
+*/
+	}
+
+	.footer-widgets-1 .innovation,
+	.footer-widgets-2 .partners,
+	.footer-widgets-2 .affils  {
+		display: block;
+		clear: both;
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		padding: 0 12px;
+	}
+	
+	.footer-widgets-1 .innovation {
+		padding-top: 20px;
+	}
+
+	.footer-widgets .wrap {
+		background: rgb(51,62,72) url(https://davekuhar.github.io/partners-wmif-2017/wp-content/themes/medforum/images/footer-globe-grid-only.svg) center top;
+		background-size: cover;
+	}
+	
+	body.agenda h3 {
+		letter-spacing: 0px;
+	}
+
+	.panel-member {
+		width: 40%;
+		margin-bottom: 30px
+	}
+
+	/* hide biogen in footer */
+	.home-sponsors-widget .home-feature {
+		display: none;
+	}
+
+	body.archive.category-blog article {
+		margin: 0 10px 30px;
+		width: 90%;
+	}
+	
+	.archive article {
+		padding: 0;
+		margin: 0;
+	}
+	
+	body.archive.category-news article, .archive article, .archive article.third {
+		float: none;
+		width: 80%;
+		margin: 20px !important;
+		padding: 0 !important;
+	}
+
+	.photo-gallery-archive {
+		width: 90%;
+		float: none;
+		margin: 10px 20px 0 0;
+	}
+	
+	.past-forums .vc_column_container {
+		margin-bottom: 30px !important;
+	}
+	
+	.sponsors-row-two {
+	    width: 40%;
+	    float: left;
+		margin: 20px 5%;
+	}
+	
+	.sponsors-row-two.bristol {
+		margin: 20px 5%;
+	}
+	
+	.sponsors-row-two.takeda {
+		margin: 20px 5%;
+	}
+	
+	.sponsors-row-three {
+	    width: 40%;
+	    float: left;
+		margin: 20px 5%;
+	}
+	
+	.speaker-search {
+	width: 100%;
+	float: none;
+	margin-right: 0;
+	}
+	
+	.entry-content .full-speaker-list h2 {
+		margin: 30px 0 16px;
+	}
+	
+}
